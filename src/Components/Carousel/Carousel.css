@@ -1,0 +1,72 @@
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex; /* Use flexbox to make cards sit side by side */
+  justify-content: center;
+  align-items: center;
+  gap: 20px; /* Add space between the cards */
+  position: relative;
+}
+
+.card {
+  position: relative;
+  width: 300px; /* Set the base width of each card */
+  height: 400px; /* Set the base height of each card */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 1.5rem;
+  background-size: cover;
+  background-position: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease; /* Smooth transform transition */
+}
+
+.card h3 {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.card span {
+  font-size: 3rem;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: 20px;
+  position: absolute;
+  bottom: -300px;
+
+}
+
+.buttons button {
+  /* background-color: rgba(0, 0, 0, 0.5); */
+z-index: 50;
+  background: none;
+  color: rgb(0, 252, 42);
+  font-size: 1.5rem;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  transform: scale(0.9);
+}

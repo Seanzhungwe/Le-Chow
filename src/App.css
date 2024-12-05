@@ -1,0 +1,242 @@
+/* src/index.css */
+/* @tailwind base;
+@tailwind components;
+@tailwind utilities;
+ */
+
+
+*{
+    overflow-x: hidden;
+    color: aliceblue;
+    text-align: center;
+    justify-content: center;
+}
+
+body{
+    background-color: rgb(12, 12, 12);
+}
+
+#Home{
+   background-image: url('./assets/Images/lechow-bg.png');
+   height: 100vh;
+   background-size: cover;
+   background-repeat: no-repeat;
+   position: relative;
+   background-position: center;
+
+}
+
+.lechow{
+    position: absolute;
+    left: 20px;
+}
+
+.logo-frame{
+    position: relative;
+   
+}
+
+/* .logo-frame P{
+    display: block;
+    position: absolute;
+} */
+
+h2{
+  font-weight: bold;  
+  margin-left: 10px;
+  margin-bottom: 5px;
+}
+
+
+.logo{
+    position: relative;
+    top: 20px;
+height: 18px;
+
+}
+
+p{
+    margin-top: 0;   
+    font-size: 12px; 
+}
+
+.search{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translateX(-50%);
+    
+}
+
+
+
+input{
+    position: relative;
+    all: unset;
+    width: 13rem;
+    padding: 5px;
+    border: 2px solid rgb(0, 252, 42);
+    border-radius: 20px;
+    margin-bottom:  50px;
+}
+
+li{
+    display: flex;
+ justify-content: center;
+ margin: 10px 0;
+}
+
+a{
+    all: unset;
+    padding: 0 10px;
+}
+
+.cate-cards{
+    display: flex;
+justify-content: center;
+display: flex;
+margin-top: 20px;
+
+}
+
+.cate-card{
+    background-image: url('./assets/Images/lemonade.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 80px;
+    height: 80px;
+    margin: 0 3px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+.cate-card::before{
+    background-color: rgba(0, 0, 0, 0.356);
+    position: absolute;
+    top: 0;
+    left: 0;
+    content: "";
+    width: 80px;
+    height: 80px;
+}
+
+h4{
+    position: relative;
+    z-index: 5;
+    
+}
+
+.cate-card:nth-child(2){
+    background-image: url('./assets/Images/Hawaiian-Chicken.jpeg');
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.cate-card:nth-child(3){
+    background-image: url('./assets/Images/vegan.jpeg');
+background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.cate-card:nth-child(4){
+    background-image: url('./assets/Images//food.jpeg');
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+@media (min-width: 500px) {
+    .cate-card{
+        width: 100px;
+        height: 90px;
+        margin: 0 5px;
+     
+    }
+
+    .cate-card::before{
+        width: 100px;
+        height: 90px;
+    }
+}
+
+@media (min-width: 700px) {
+    .cate-card{
+        width: 140px;
+        height: 100px;
+        margin: 0 5px;
+     
+    }
+
+    .cate-card::before{
+        width: 140px;
+        height: 100px;
+    }
+}
+
+
+@media (min-width: 900px) {
+    .cate-card{
+        width: 160px;
+        height: 110px;
+        margin: 0 8px;
+     
+    }
+
+    .cate-card::before{
+        width: 160px;
+        height: 110px;
+    }
+}
+
+
+@media (min-width: 1200px) {
+    .cate-card{
+        width: 250px;
+        height: 180px;
+        margin: 0 8px;
+     
+    }
+
+    .cate-card::before{
+        width: 250px;
+        height: 180px;
+    }
+}
+
+/***********PROFILE******************/
+
+#Profile{
+height: 70vh;
+display: flex;
+justify-content: center;
+}
+
+.dp{
+    border:  2px solid;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    background-image: url('./assets/Images/hat.svg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+/* ********8GALLERY***** */
+
+
+
+/* ************PROFILE*********** */
+
+
+.savebtn{
+    padding: 5px;
+}
+
+.savebtn:hover{
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+        background-color: rgb(0, 252, 42);;
+    }

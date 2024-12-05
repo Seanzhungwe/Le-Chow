@@ -1,0 +1,32 @@
+.modal {
+    border: 2px solid #fff;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.recipe {
+    margin-top: 10px;
+    display: flex;
+}
+
+.book {
+    height: 20px;
+    width: 20px;
+    margin-right: 5px;
+}
+
+.recipe p {
+    color: rgb(0, 252, 42);
+    cursor: pointer;
+}
+
+button {
+    padding: 5px;
+}
+
+.seebtn:hover {
+    border-radius: 10px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: rgb(0, 252, 42);
+    ;
+}

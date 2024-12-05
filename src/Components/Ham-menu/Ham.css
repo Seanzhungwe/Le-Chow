@@ -1,0 +1,158 @@
+/* Basic Structure */
+.ham {
+  position: relative;
+}
+
+/* Hamburger Toggle */
+.ham label .toggle {
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  height: 30px;
+  width: 35px;
+  top: 30px;
+  right: 20px;
+  z-index: 100;
+  transition: 1.2s cubic-bezier(0.93, 0.28, 0, 0.31);
+  border-color: rgba(47, 45, 45, 0.226);
+  border-width: 1px;
+  border-radius: 2px;
+}
+
+.ham label .toggle .dot {
+  position: absolute;
+  height: 4px;
+  background-color: rgb(0, 252, 42);
+  border-radius: 3px;
+  transition: 0.3s ease;
+  width: 25px;
+}
+
+.ham label .toggle .top-dot {
+  top: 25%;
+  left: 50%;
+  transition: 1s;
+  transform: translate(-50%, -50%);
+}
+
+.ham label .toggle .mid-dot {
+  top: 50%;
+  left: 50%;
+  transition: 1s;
+  transform: translate(-50%, -50%);
+}
+
+.ham label .toggle .btm-dot {
+  top: 75%;
+  left: 50%;
+  transition: 1s;
+  transform: translate(-50%, -50%);
+}
+
+/* Slide Menu */
+.ham label .slide {
+  top: 0;
+  height: 100%;
+  width: 250px; /* Adjust width for larger menu */
+  right: 0;
+  position: fixed;
+  background-color: rgb(12, 12, 12);
+  background-image: url('../../assets/Images/lechow-bg.png');
+  background-position: center;
+  transition: 1.2s cubic-bezier(0.8, 0.28, 0, 0.31);
+  transform: translateX(100%);
+  z-index: 999;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ham label .slide.open {
+  transform: translateX(0);
+}
+
+.ham label .slide nav ul {
+  list-style: none;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  opacity: 100%;
+}
+
+.ham label .slide nav ul .link {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  transition: 0.25s ease-in;
+}
+
+.ham label .slide nav ul .link:hover {
+  color: rgba(255, 247, 247, 0.747);
+  font-weight: bold;
+}
+
+/* Link Hover Effects */
+.ham label .slide nav a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  padding: 10px 0;
+  display: block;
+  transition: 0.25s ease-in;
+}
+
+.ham label .slide nav a:hover {
+  color: rgba(255, 255, 255, 0.747);
+  text-shadow: 0 0 3px rgb(160, 159, 159);
+  font-weight: bold;
+}
+
+/* Input Styling */
+.ham input {
+  display: none;
+  visibility: hidden;
+}
+
+/* Transformations when Hamburger is active */
+.ham input:checked ~ .toggle .top-dot {
+  left: 15%;
+  top: 43%;
+  transition: 1s;
+  transform: rotate(45deg);
+}
+
+.ham input:checked ~ .toggle .mid-dot {
+  left: 15%;
+  top: 43%;
+  transform: rotate(135deg);
+}
+
+.ham input:checked ~ .toggle .btm-dot {
+  left: 15%;
+  top: 43%;
+  transition: 1s;
+  transform: rotate(-45deg);
+}
+
+/* Hover Effects */
+.ham .toggle:hover {
+  transition: 0.5s;
+  box-shadow: 0 0 5px rgb(255, 255, 255);
+}
+
+.ham input:checked ~ .slide {
+  transition: 1.2s ease;
+  transform: translateX(0);
+}
+
+/* Link active styling */
+.ham label .slide nav ul .link.active {
+  background-color: rgba(0, 252, 42, 0.1); /* Highlight active link */
+}
+
+.ham label .slide nav ul .link:active {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+}

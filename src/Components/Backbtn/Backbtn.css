@@ -1,0 +1,13 @@
+.backbtn{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    padding: 10px;
+
+}
+
+.backbtn:hover{
+border-radius: 10px;
+transition: background-color 0.3s ease, transform 0.3s ease;
+    background-color: rgb(0, 252, 42);;
+}
